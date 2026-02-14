@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Consolas, Monaco, "Courier New", monospace;
+}
+
+body {
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 12px;
+}
+
+.vscode-window {
+  width: 100%;
+  max-width: 900px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid #2d2d2d;
+}
+
+.top-bar {
+  background-color: #2d2d2d;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.red { background: #ff5f56; }
+.yellow { background: #ffbd2e; }
+.green { background: #27c93f; }
+
+.file-name {
+  color: #cccccc;
+  font-size: 13px;
+  opacity: 0.8;
+}
+
+/* EDITOR */
+.editor {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  color: #d4d4d4;
+}
+
+.profile-section {
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.profile-section img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 3px solid #007acc;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.profile-section img:hover {
+  transform: scale(1.05);
+}
+
+pre {
+  background: #1e1e1e;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.5;
+
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow-x: hidden;
+}
+
+.key { color: #9cdcfe; }
+.string { color: #ce9178; }
+.number { color: #b5cea8; }
+.boolean { color: #569cd6; }
+.null { color: #569cd6; }
+
+
+.qr-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+#qrcode {
+  padding: 4px;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+.save-btn {
+  background: #007acc;
+  color: white;
+  padding: 6px 14px;
+  font-size: 12px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.2s ease;
+}
+
+.save-btn:hover {
+  background: #005f99;
+}
+
+@media (orientation: landscape) and (max-height: 700px) {
+  .editor {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+
+  .profile-section {
+    flex: 0 0 170px;
+  }
+
+  .profile-section img {
+    width: 140px;
+    height: 140px;
+  }
+
+  pre {
+    flex: 2;
+  }
+
+  .qr-section {
+    flex: 1;
+  }
+}
+
+@media (max-width: 400px) {
+  pre {
+    font-size: 12px;
+  }
+
+  .profile-section img {
+    width: 120px;
+    height: 120px;
+  }
+}

@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Erika Matesz Bueno
+N:Matesz Bueno;Erika;;;
+ORG:The Climate Loop Project
+TITLE:Software Developer & Data Scientist
+TEL;TYPE=CELL:+5521999665122
+EMAIL:ecmateszbueno@gmail.com
+
+URL;TYPE=WORK:https://github.com/climateloop
+URL;TYPE=HOME:https://linkedin.com/in/mateszbueno
+URL;TYPE=OTHER:https://github.com/erikamatesz
+
+END:VCARD
