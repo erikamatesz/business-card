@@ -3,7 +3,7 @@ const contactURL = `${BASE_URL}/business-card/card.vcf`;
 
 const data = {
   name: "Erika Matesz Bueno",
-  role: "Developer & Data Scientist",
+  role: "Software Developer & Data Scientist",
   organization: "The Climate Loop Project",
   phone: "+55 21 99966-5122",
   email: "ecmateszbueno@gmail.com",
