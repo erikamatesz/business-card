@@ -4,44 +4,49 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Erika Matesz Bueno</title>
+
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
   <link rel="shortcut icon" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <div class="vscode-window">
+  <div class="container">
 
-    <div class="top-bar">
-      <div class="dots">
-        <span class="red"></span>
-        <span class="yellow"></span>
-        <span class="green"></span>
-      </div>
-      <span class="file-name">Erika.json</span>
+    <!-- Foto -->
+    <div class="profile-section">
+      <img src="assets/erika.jpg" alt="Erika" />
     </div>
 
-    <div class="editor">
-
-      <div class="profile-section">
-        <img src="assets/erika.jpg" alt="Erika" />
+    <!-- VSCode com JSON -->
+    <div class="vscode-window">
+      <div class="top-bar">
+        <div class="dots">
+          <span class="red"></span>
+          <span class="yellow"></span>
+          <span class="green"></span>
+        </div>
+        <span class="file-name">business-card.json</span>
       </div>
-
-      <pre><code id="jsonContent"></code></pre>
-
-      <div class="qr-section">
-        <div id="qrcode"></div>
-        <a href="card.vcf" class="save-btn">💾 Save Contact</a>
+      <div class="editor">
+        <pre><code id="jsonContent"></code></pre>
       </div>
+    </div>
 
+    <!-- QR + botão -->
+    <div class="qr-section">
+      <div id="qrcode"></div>
+      <a href="https://erikamatesz.github.io/business-card/card.vcf" class="save-btn">💾 Save Contact</a>
     </div>
 
   </div>
 
+  <!-- QRCode.js -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
   <script src="script.js"></script>
-
 </body>
 </html>

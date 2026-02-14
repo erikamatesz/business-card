@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -14,9 +15,34 @@ body {
   padding: 12px;
 }
 
+/* Container principal */
+.container {
+  display: flex;
+  flex-direction: column; /* Portrait por padrão */
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* FOTO */
+.profile-section img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid #007acc;
+  object-fit: cover;
+  transition: 0.3s ease;
+}
+
+.profile-section img:hover {
+  transform: scale(1.05);
+}
+
+/* VSCode Window */
 .vscode-window {
   width: 100%;
-  max-width: 900px;
+  max-width: 700px;
   background-color: #1e1e1e;
   border-radius: 8px;
   overflow: hidden;
@@ -53,62 +79,42 @@ body {
   opacity: 0.8;
 }
 
-/* EDITOR */
 .editor {
   padding: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
   color: #d4d4d4;
 }
 
-.profile-section {
-  text-align: center;
-  flex-shrink: 0;
-}
-
-.profile-section img {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
-  border: 3px solid #007acc;
-  object-fit: cover;
-  transition: 0.3s ease;
-}
-
-.profile-section img:hover {
-  transform: scale(1.05);
-}
-
+/* JSON */
 pre {
   background: #1e1e1e;
   padding: 12px;
   border-radius: 6px;
   font-size: 13px;
   line-height: 1.5;
-
   white-space: pre-wrap;
   word-wrap: break-word;
   overflow-wrap: break-word;
   overflow-x: hidden;
 }
 
+/* Syntax highlight */
 .key { color: #9cdcfe; }
 .string { color: #ce9178; }
 .number { color: #b5cea8; }
 .boolean { color: #569cd6; }
 .null { color: #569cd6; }
 
-
+/* QR + botão */
 .qr-section {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
+  margin-top: 16px; /* mais espaço no portrait */
 }
 
 #qrcode {
-  padding: 4px;
+  padding: 3px;
   background: #ffffff;
   border-radius: 6px;
 }
@@ -116,7 +122,7 @@ pre {
 .save-btn {
   background: #007acc;
   color: white;
-  padding: 6px 14px;
+  padding: 5px 12px;
   font-size: 12px;
   text-decoration: none;
   border-radius: 5px;
@@ -127,38 +133,51 @@ pre {
   background: #005f99;
 }
 
-@media (orientation: landscape) and (max-height: 700px) {
-  .editor {
+/* LANDSCAPE */
+@media (orientation: landscape) and (min-width: 700px) {
+  .container {
     flex-direction: row;
-    align-items: center;
+    align-items: center; /* foto + QR centralizados verticalmente */
+    justify-content: center;
     gap: 24px;
   }
 
-  .profile-section {
-    flex: 0 0 170px;
-  }
-
   .profile-section img {
-    width: 140px;
-    height: 140px;
+    width: 160px;
+    height: 160px;
   }
 
-  pre {
-    flex: 2;
+  #qrcode {
+    padding: 3px;
+  }
+
+  .save-btn {
+    padding: 4px 10px;
+    font-size: 11px;
   }
 
   .qr-section {
-    flex: 1;
+    margin-top: 0; /* sem espaçamento extra */
   }
 }
 
+/* TELAS PEQUENAS */
 @media (max-width: 400px) {
+  .profile-section img {
+    width: 130px;
+    height: 130px;
+  }
+
   pre {
     font-size: 12px;
   }
 
-  .profile-section img {
-    width: 120px;
-    height: 120px;
+  #qrcode {
+    padding: 3px;
+  }
+
+  .save-btn {
+    padding: 4px 10px;
+    font-size: 11px;
   }
 }
