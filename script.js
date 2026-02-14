@@ -1,5 +1,5 @@
 const BASE_URL = window.location.origin;
-const contactURL = `${BASE_URL}/card.vcf`;
+const contactURL = `${BASE_URL}/business-card/card.vcf`;
 
 const data = {
   name: "Erika Matesz Bueno",
